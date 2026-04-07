@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>Knowing Starlight</title>
-    <link rel="icon" href="polaris.png">
+    <link rel="icon" href="media/polaris.png">
     <link rel="stylesheet" href="style.css">
+    <script src="collapsiblesections.js" defer></script>
   </head>
   <body>
     <nav>
@@ -14,17 +15,21 @@
       <a href="sandbox.html">Sandbox</a>
     </nav>
     <h1>Gallery</h1>
-    <section>
+    <section class="collapsible">
       <h2>Exhibit A</h2>
-      <!-- TODO: img: Belfast want to give a big yes. -->
+      <p>This photo was taken by yours truly when touring Ireland the week before the Scottish referendum of 2014.</p>
+      <img src="media/Belfast's big YES.jpg" alt="Belfast want to give a big yes.">
     </section>
-    <section>
-      <h2>Exhibit A</h2>
-      <!-- TODO: audio: Scottish independence. -->
+    <section class="collapsible">
+      <h2>Exhibit B</h2>
+      <p>This audio was recorded by yours truly in front of Scottish parliament on the evening of the great referendum.</p>
+      <audio><!-- TODO: audio: Scottish independence. --></audio>
+      <p>...but I've forgotten which computer I have those files on, so you're just going to have to believe me..!</p>
     </section>
-    <section>
-      <h2>Exhibit A</h2>
-      <!-- TODO: iframe: one of the stories I wrote in scotland -->
+    <section class="collapsible">
+      <h2>Exhibit C</h2>
+      <p>This story was written by yours truly during one of my sojourns to the Scottish borough of Paisley.</p>
+      <iframe class="pdf" src="media/Scarlet's Letters.pdf"></iframe>
     </section>
   </body>
 </html>

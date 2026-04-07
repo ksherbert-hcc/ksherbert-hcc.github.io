@@ -6,3 +6,18 @@ em {
     color: #601c2e;
     font-style: normal;
 }
+
+.pdf {
+    width: 80em;
+    height: 40em;
+}
+
+.collapsible {
+    margin: 2em;
+    padding: 2em;
+    background-color: skyblue;
+}
+
+.collapsible > button {
+    float: left;
+}
