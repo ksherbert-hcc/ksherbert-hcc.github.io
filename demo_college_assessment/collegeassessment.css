@@ -1,0 +1,23 @@
+:root {
+    --hcc-red: #601c2e;
+    --hcc-gray: #949ca6;
+}
+
+body {
+    background-color: var(--hcc-red);
+}
+
+body > h1 {
+    color: white;
+    margin: 30px;
+}
+
+body > section {
+    background-color: var(--hcc-gray);
+    margin: 30px;
+    padding: 1em;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+}

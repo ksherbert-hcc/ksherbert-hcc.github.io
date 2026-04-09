@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HCC College Competency Reporting Form</title>
+    <link rel="stylesheet" href="collegeassessment.css">
+    <script src="collegeassessment.js" defer></script>
+  </head>
+  <body>
+    <h1>HCC College Competency Reporting Form</h1>
+    <section id="directions">
+      <h2>Directions</h2>
+      <ul>
+        <li>Academic directors: consolidate assessment data from all courses taught in your program this semester.</li>
+        <li>On this form, only report data from the <strong>final</strong> indicator for each course, as this most accurately reflects the highest proficiency level achieved by students.</li>
+        <li>Each course should be categorized according to which competency it assessed (<strong>Competency</strong>) and to how the course relates to the college curriculum (<strong>Data Source</strong>). Data from courses with the same competency and data source may be combined into a single row.</li>
+        <li>Alternatively, if you find it easier, you may choose to create a separate row for each course. The "Label" column is provided as a convenience to distinguish rows as you enter data. The database does not require it.</li>
+      </ul>
+    </section>
+    <section id="dataentry">
+      <h2>Data Entry</h2>
+      <form name="form">
+        <p>
+          <label for="academic-program">Academic Program</label>
+          <select name="academic-program" id="academic-program" required>
+            <option value=""></option>
+            <option value="College">College</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Education">Education</option>
+          </select>
+        </p>
+        <p>
+          <label for="academic-year">Academic Year</label>
+          <select name="academic-year" id="academic-year" required>
+            <option value=""></option>
+            <option value="2025-2026">2025-2026</option>
+            <option value="2024-2025">2024-2026</option>
+            <option value="2023-2024">2023-2024</option>
+          </select>
+        </p>
+        <p>
+          <label for="semester">Semester</label>
+          <select name="semester" id="semester" required>
+            <option value=""></option>
+            <option value="Fall">Fall</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+          </select>
+        </p>
+        <p>
+          <button type="button" id="add-row">Add Row</button>
+          <button type="button" id="remove-row" disabled>Remove Last Row</button>
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Competency</th>
+              <th>Data Source</th>
+              <th>(Optional) Label</th>
+              <th>Advancing</th>
+              <th>Achieving</th>
+              <th>Approaching</th>
+              <th>Emerging</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr>
+              <td>0</td>
+              <td>
+                <select class="table-input" name="CC-0" required>
+                  <option value=""></option>
+                  <optgroup label="Scholar">
+                    <option value="SCHOLAR.1">SCHOLAR.1</option>
+                    <option value="SCHOLAR.2">SCHOLAR.2</option>
+                    <option value="SCHOLAR.3">SCHOLAR.3</option>
+                    <option value="SCHOLAR.4">SCHOLAR.4</option>
+                    <option value="SCHOLAR.5">SCHOLAR.5</option>
+                  </optgroup>
+                  <optgroup label="Citizen">
+                    <option value="CITIZEN.1">CITIZEN.1</option>
+                    <option value="CITIZEN.2">CITIZEN.2</option>
+                    <option value="CITIZEN.3">CITIZEN.3</option>
+                    <option value="CITIZEN.4">CITIZEN.4</option>
+                  </optgroup>
+                  <optgroup label="Leader">
+                    <option value="LEADER.1">LEADER.1</option>
+                    <option value="LEADER.2">LEADER.2</option>
+                    <option value="LEADER.3">LEADER.3</option>
+                    <option value="LEADER.4">LEADER.4</option>
+                  </optgroup>
+                  <optgroup label="Disciple">
+                    <option value="DISCIPLE.1">DISCIPLE.1</option>
+                    <option value="DISCIPLE.2">DISCIPLE.2</option>
+                    <option value="DISCIPLE.3">DISCIPLE.3</option>
+                  </optgroup>
+                </select>
+              </td>
+              <td>
+                <select class="table-input" name="DS-0" required>
+                  <option value=""></option>
+                  <option value="COLL">COLL</option>
+                  <option value="Core 100/200">Core 100/200</option>
+                  <option value="Core 300/400">Core 300/400</option>
+                  <option value="Other 100/200">Other 100/200</option>
+                  <option value="Other 300/400">Other 300/400</option>
+                </select>
+              </td>
+              <td><input class="table-input" name="LB-0"></td>
+              <td><input class="table-input" type="number" min="0" name="Ad-0" value="0" required></td>
+              <td><input class="table-input" type="number" min="0" name="Ac-0" value="0" required></td>
+              <td><input class="table-input" type="number" min="0" name="Ap-0" value="0" required></td>
+              <td><input class="table-input" type="number" min="0" name="Em-0" value="0" required></td>
+            </tr>
+          </tbody>
+        </table>
+        <input type="submit" value="Submit" id="submit">
+        <p id="feedback"></p>
+      </form>
+    </section>
+    <section id="source-descriptions">
+      <h2>Description of Data Sources</h2>
+      <table>
+        <tr>
+          <th>Data Source</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>COLL</td>
+          <td>Data Collected from COLL Courses (ie Mind and Heart)</td>
+        </tr>
+        <tr>
+          <td>Core 100/200</td>
+          <td>Data Collected from 100-200 Level Courses Required as part of the College Curriculum (ie Theo 140, Math 111)</td>
+        </tr>
+        <tr>
+          <td>Core 300/400</td>
+          <td>Data Collected from 300-400 Level College Curriculum Courses</td>
+        </tr>
+        <tr>
+          <td>Other 100/200</td>
+          <td>Data Collected from 100-200 Level Course NOT in the College Curriculum</td>
+        </tr>
+        <tr>
+          <td>Other 300/400</td>
+          <td>Data Collected from 300-400 Level Course NOT in the College Curriculum</td>
+        </tr>
+      </table>
+    </section>
+    <section id="competency-descriptions">
+      <h2>Description of College Competencies</h2>
+      <table>
+        <tr>
+          <th>College Competency</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>SCHOLAR.1</td>
+          <td>Formulate various genres of written communication using accepted standards of language, and forms of citation.</td>
+        </tr>
+        <tr>
+          <td>SCHOLAR.2</td>
+          <td>Integrate, substantial, balanced, and persuasive evidence to support a position appropriate to the genre of writing, using the proper form of citation.</td>
+        </tr>
+        <tr>
+          <td>SCHOLAR.3</td>
+          <td>Acquire the skills to critically and actively participate in discussions of complex texts.</td>
+        </tr>
+        <tr>
+          <td>SCHOLAR.4</td>
+          <td>Use appropriate technologies to access, evaluate, and manage information.</td>
+        </tr>
+        <tr>
+          <td>SCHOLAR.5</td>
+          <td>Apply appropriate disciplinary methodologies to address contemporary issues.</td>
+        </tr>
+        <tr>
+          <td>CITIZEN.1</td>
+          <td>Engage in respectful civil discourse with an openness to the ideas of others, while seeking mutual understanding.</td>
+        </tr>
+        <tr>
+          <td>CITIZEN.2</td>
+          <td>Explain the ways that aesthetic expressions (art, narrative, poetry, music, architecture, mathematics, etc.) reflect and shape culture and values.</td>
+        </tr>
+        <tr>
+          <td>CITIZEN.3</td>
+          <td>Examine critically the moral, environmental, political, economic, and social complexity of contemporary issues.</td>
+        </tr>
+        <tr>
+          <td>CITIZEN.4</td>
+          <td>Examine the moral and social obligation to demonstrate work for social change.</td>
+        </tr>
+        <tr>
+          <td>LEADER.1</td>
+          <td>Communicate a clear vision that engages and motivates others to participate.</td>
+        </tr>
+        <tr>
+          <td>LEADER.2</td>
+          <td>Demonstrate the ability to organize, coordinate, and work effectively in group settings.</td>
+        </tr>
+        <tr>
+          <td>LEADER.3</td>
+          <td>Develop critical thinking and problem-solving skills to construct effective solutions.</td>
+        </tr>
+        <tr>
+          <td>LEADER.4</td>
+          <td>Deliver professionally organized oral presentations.</td>
+        </tr>
+        <tr>
+          <td>DISCIPLE.1</td>
+          <td>Apply faith and reason as a lens for understanding the world.</td>
+        </tr>
+        <tr>
+          <td>DISCIPLE.2</td>
+          <td>Demonstrate the practices of Catholic Social Teaching that contribute to human dignity, common good, solidarity, justice, and peace.</td>
+        </tr>
+        <tr>
+          <td>DISCIPLE.3</td>
+          <td>Articulate various aspects of vocational living, sound decision-making, and an openness to growth in self-awareness in their career and as members of their families and communities.</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
