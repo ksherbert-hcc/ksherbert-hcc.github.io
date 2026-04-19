@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Knowing Starlight</title>
+    <link rel="icon" href="media/polaris.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Blog</a>
+      <a href="resume.html">Resume</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="sandbox.html">Sandbox</a>
+      <a href="api.js">API</a>
+    </nav>
+    <div id="prelude">
+      <h1>The Douay-Rheims Bible</h1>
+      <p>The Douay-Rheims translation of the bible is a direct translation of the Latin vulgate. But it is hard to justify calling it a vulgar translation today! Originally published in the sixteenth century, it is conspicuous for its use of Latinized versions of otherwise recognizable names. How many can you find?</p>
+      <p>Note: The version of the Douay-Rheims available through <a href="https://bible-api.com/">this API</a> is missing the so-called <em>deuterocanonical</em> books, a collection of Old Testament texts included in the Catholic canon but not in Protestant canon. The original translation certainly does include these books, and I think their omission is an accident of the interface set up for the API. It <em>does</em> appear to include other portions of text which Protestant bibles normally leave out, e.g. chapters 13 and 14 of Daniel.</p>
+    </div>
+    <div id="input">
+      <p>
+        <label for="input-book">Book:</p>
+        <select id="input-book" disabled><!-- To be filled from JavaScript. --></select>
+      </p>
+      <p>
+        <label for="input-chapter">Chapter:</p>
+        <input id="input-chapter" type="number" min="1" disabled>
+      </p>
+      <p>
+        <label for="input-verse">Verse:</p>
+        <input id="input-verse" type="number" min="1" disabled>
+      </p>
+    </div>
+    <div id="reading">
+      <h2 id="reading-header"><!-- To be filled from JavaScript. --></h2>
+      <p id="reading-verse"><!-- To be filled from JavaScript. --></p>
+    </div>
+    <div id="error">
+      <h2>API Status</h2>
+      <p id="error-message">Waiting for Douay-Rheims book list...</p>
+    </div>
+  </body>
+</html>
