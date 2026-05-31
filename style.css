@@ -1,9 +1,14 @@
+:root {
+    --hcc-gray: #949ca6;
+    --hcc-maroon: #601c2e;
+}
+
 body {
-    background-color: #949ca6;
+    background-color: var(--hcc-gray);
 }
 
 em {
-    color: #601c2e;
+    color: var(--hcc-maroon);
     font-style: normal;
 }
 
@@ -20,4 +25,13 @@ em {
 
 .collapsible > button {
     float: left;
+}
+
+.footnote-ref {
+    vertical-align: super;
+    font-size: small;
+}
+
+.footnote {
+    font-size: smaller;
 }
