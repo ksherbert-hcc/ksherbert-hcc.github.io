@@ -4,86 +4,426 @@
     <title>Knowing Starlight</title>
     <link rel="icon" href="media/polaris.png">
     <link rel="stylesheet" href="style.css">
+    <script src="script/collapsiblesections.js" defer></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html">Blog</a>
-      <a href="resume.html">Resume</a>
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Musings</a>
+      <a href="resume.html" class="active-nav">CV</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact Me</a>
       <a href="sandbox.html">Sandbox</a>
       <a href="api.html">API</a>
     </nav>
-    <section>
-      <h1>Resume</h1>
-      <p>Kyle Sherbert</p>
-      <p><a href="mailto:ksherbert@hcc-nd.edu">ksherbert@hcc-nd.edu</a></p>
-
-      <h2>Education</h2>
-      <table>
-        <tr>
-          <th>Degree</th>
-          <th>Institution</th>
-          <th>Subject</th>
-          <th>Year</th>
-        </tr>
-        <tr>
-          <td>Ph.D</td>
-          <td>University of North Texas</td>
-          <td>Physics</td>
-          <td>2022</td>
-        </tr>
-        <tr>
-          <td>MS</td>
-          <td>University of North Texas</td>
-          <td>Physics</td>
-          <td>2020</td>
-        </tr>
-        <tr>
-          <td>MS</td>
-          <td>Towson University</td>
-          <td>Computer Science</td>
-          <td>2017</td>
-        </tr>
-        <tr>
-          <td>BS</td>
-          <td>University of North Texas</td>
-          <td>Physics; Molecular Biology, Biochemistry and Bioinformatics</td>
-          <td>2015</td>
-          </tr>
-      </table>
-
-      <h2>Experience</h2>
-      <table>
-        <tr>
-          <th>Title</th>
-          <th>Institution</th>
-          <th>Achievements</th>
-          <th>Year</th>
-        </tr>
-        <tr>
-          <td>Assistant Professor, Academic Director of Computer Science</td>
-          <td>Holy Cross College, Department of Natural and Quantitative Sciences</td>
-          <td>
-            <ul>
-              <li>Taught some classes.</li>
-              <li>Built a website.</li>
-            </ul>
-            </td>
-          <td>2025-present</td>
-        </tr>
-        <tr>
-          <td>Postdoctoral Research Associate</td>
-          <td>Virginia Tech Department of Physics, Department of Chemistry</td>
-          <td>
-            <ul>
-              <li>Wrote some code.</li>
-              <li>Published some papers.</li>
-            </ul>
-            </td>
-          <td>2022-2025</td>
-        </tr>
-      </table>
-  </section>
+    <div class="resume">
+      <section id="note" class="collapsible">
+        <h2 class="title">Note to Students</h2> 
+        <p>This page gives my <em>curriculum vitae</em>, the <em>course of my life</em>, academia's alternative to a resume which is painfully <em>comprehensive</em>. By contrast, your <em>resume</em> should be a concise <em>summary</em> of your skills. The sections on this page which start expanded are good models for the scope and depth of content on a resume, but you should be creative with formatting to bring out your most meaningful experiences.</p>
+        <p>Remember that for every job you apply to, you should learn everything you can about the employer and then craft a new version of your resume just for them. But a generic resume on your personal website is a great backup to share in chance encounters.</p>
+      </section>
+      <section id="contact" class="collapsible expanded">
+        <h2 class="summary">Contact Card</h2>
+        <h2>Kyle Sherbert</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Assistant Professor, Holy Cross College<br>Academic Director of Computer Science<br><a href="mailto:ksherbert@hcc-nd.edu">ksherbert@hcc-nd.edu</a></td>
+              <td>Holy Cross College<br>Vincent 126<br>574.239.8316</td>
+              <td style="font-style: italic">Kyle Sherbert<br>54515 S.R. 933 NORTH, P.O. BOX 308<br>NOTRE DAME, IN 46556-308</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="education" class="collapsible expanded">
+        <h2 class="summary">Diplomas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Degree</th>
+              <th>Institution</th>
+              <th>Subject</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ph.D</td>
+              <td>University of North Texas</td>
+              <td>Physics</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>M.S</td>
+              <td>University of North Texas</td>
+              <td>Physics</td>
+              <td>2020</td>
+            </tr>
+            <tr>
+              <td>M.S</td>
+              <td>Towson University</td>
+              <td>Computer Science</td>
+              <td>2017</td>
+            </tr>
+            <tr>
+              <td>B.S</td>
+              <td>University of North Texas</td>
+              <td>Physics; Molecular Biology, Biochemistry and Bioinformatics</td>
+              <td>2015</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="teaching" class="collapsible">
+        <h2 class="title">Teaching Record - Holy Cross College, Department of Natural and Quantitative Sciences</h2>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Code</th>
+              <th>Course</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="separator"><th></th></tr>
+            <tr>
+              <th rowspan="4">Fall 2026</th>
+              <td>COLL 101</td>
+              <td>Mind and Heart Seminar</td>
+            </tr>
+            <tr>
+              <td>CS 160</td>
+              <td>Discrete Logic</td>
+            </tr>
+            <tr>
+              <td>CS 227</td>
+              <td>Introduction to AI and Machine Learning</td>
+            </tr>
+            <tr>
+              <td>CS 280</td>
+              <td>Data Structures</td>
+            </tr>
+            <tr class="separator"><th></th></tr>
+            <tr>
+              <th rowspan="4">Spring 2026</th>
+              <td>CS 160</td>
+              <td>Discrete Logic</td>
+            </tr>
+            <tr>
+              <td>CS 200</td>
+              <td>Introduction to Web Development</td>
+            </tr>
+            <tr>
+              <td>CS 280</td>
+              <td>Data Structures</td>
+            </tr>
+            <tr>
+              <td>MATH 220</td>
+              <td>Cryptology</td>
+            </tr>
+            <tr class="separator"><th></th></tr>
+            <tr>
+              <th rowspan="4">Fall 2025</th>
+              <td>CS 160</td>
+              <td>Discrete Logic</td>
+            </tr>
+            <tr>
+              <td>CS 227</td>
+              <td>Introduction to AI and Machine Learning</td>
+            </tr>
+            <tr>
+              <td>CS 299</td>
+              <td>Research Seminar</td>
+            </tr>
+            <tr>
+              <td>CS 400</td>
+              <td>Algorithms and Automata</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="teaching" class="collapsible">
+        <h2 class="title">Teaching Record - Johns Hopkins University, Center for Talented Youth</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Course</th>
+              <th>Site</th>
+              <th>Term</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="separator"><th colspan="6">Instructor</th></tr>
+            <tr>
+              <td></td>
+              <td>Flex (Physics)</td>
+              <td>BRI</td>
+              <td>2026.2</td>
+              <td>Bristol, RI</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex (Physics)</td>
+              <td>BRI</td>
+              <td>2026.1</td>
+              <td>Bristol, RI</td>
+            </tr>
+            <tr>
+              <td>ASTR</td>
+              <td>Astrophysics</td>
+              <td>JHU</td>
+              <td>2025.2</td>
+              <td>Baltimore, MD</td>
+            </tr>
+            <tr>
+              <td>ASTR</td>
+              <td>Astrophysics</td>
+              <td>JHU</td>
+              <td>2025.1</td>
+              <td>Baltimore, MD</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex (Physics)</td>
+              <td>COL</td>
+              <td>2024.1</td>
+              <td>Collegeville, PA</td>
+            </tr>
+            <tr>
+              <td>SREH</td>
+              <td>Special Relativity</td>
+              <td>JHU</td>
+              <td>2023.2</td>
+              <td>Baltimore, MD</td>
+            </tr>
+            <tr>
+              <td>CODE</td>
+              <td>Cryptology</td>
+              <td>BRI</td>
+              <td>2023.1</td>
+              <td>Bristol, RI</td>
+            </tr>
+            <tr>
+              <td>DATA</td>
+              <td>Data Structures</td>
+              <td>BRI</td>
+              <td>2022.2</td>
+              <td>Bristol, RI</td>
+            </tr>
+            <tr>
+              <td>DATA</td>
+              <td>Data Structures</td>
+              <td>BRI</td>
+              <td>2022.1</td>
+              <td>Bristol, RI</td>
+            </tr>
+            <tr class="separator"><th colspan="6">Online Instructor</th></tr>
+            <tr>
+              <td></td>
+              <td colspan="2">Introduction to Python for Middle School Students</td>
+              <td colspan="2">2020-2022</td>
+              <td></td>
+            </tr>
+            <tr class="separator"><th colspan="6">Teaching Assistant</th></tr>
+            <tr>
+              <td>ASTR</td>
+              <td>Astrophysics</td>
+              <td>LAN</td>
+              <td>2019.2</td>
+              <td>Lancaster, PA</td>
+            </tr>
+            <tr>
+              <td>ASTR</td>
+              <td>Astrophysics</td>
+              <td>LAN</td>
+              <td>2019.1</td>
+              <td>Lancaster, PA</td>
+            </tr>
+            <tr>
+              <td>FCPS</td>
+              <td>Principles of Computer Science</td>
+              <td>SEA</td>
+              <td>2018.2</td>
+              <td>Seattle, WA</td>
+            </tr>
+            <tr>
+              <td>FCPS</td>
+              <td>Fundamentals of Computer Science</td>
+              <td>SEA</td>
+              <td>2018.1</td>
+              <td>Seattle, WA</td>
+            </tr>
+            <tr>
+              <td>CODE</td>
+              <td>Cryptology</td>
+              <td>LOS</td>
+              <td>2017.2</td>
+              <td>Los Angeles, CA</td>
+            </tr>
+            <tr>
+              <td>CODE</td>
+              <td>Cryptology</td>
+              <td>LOS</td>
+              <td>2017.1</td>
+              <td>Los Angeles, CA</td>
+            </tr>
+            <tr>
+              <td>ASTR</td>
+              <td>Astrophysics</td>
+              <td>LAN</td>
+              <td>2016.2</td>
+              <td>Lancaster, PA</td>
+            </tr>
+            <tr>
+              <td>DATA</td>
+              <td>Data Structures and Algorithms</td>
+              <td>LAN</td>
+              <td>2016.1</td>
+              <td>Lancaster, PA</td>
+            </tr>
+            <tr>
+              <td>GNIC</td>
+              <td>Genomics</td>
+              <td>JHU</td>
+              <td>2015.2</td>
+              <td>Baltimore, MD</td>
+            </tr>
+            <tr>
+              <td>IENG</td>
+              <td>Investigations in Engineering</td>
+              <td>JHU</td>
+              <td>2015.1</td>
+              <td>Baltimore, MD</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="publications" class="collapsible">
+        <h2 class="title">Publications</h2>
+        <ul>
+          <!-- <li><a class="arXiv" href="">Test this</a></li> -->
+        </ul>
+        <p>Website under construction! Please see <a href="https://github.com/kmsherbert/CV/blob/main/cv.pdf">my personal Github repository</a> for an older version of my CV.</p>
+      </section>
+      <section id="presentations" class="collapsible">
+        <h2 class="title">Presentations</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Talk</th>
+              <th>Venue</th>
+              <th>Location</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="separator"><th colspan="4">Invited</th></tr>
+            <tr>
+              <td>Generative Gibberish: A hands-on tutorial to creating your own AI slop</td>
+              <td>Quo Vaditis (Holy Cross Faculty AI Workshop)</td>
+              <td>Notre Dame, IN</td>
+              <td>Jun 2026</td>
+            </tr>
+            <tr class="separator"><th colspan="4">Contributed</th></tr>
+            <tr class="separator"><th colspan="4">Poster</th></tr>
+          </tbody>
+        </table>
+        <p>Website under construction! Please see <a href="https://github.com/kmsherbert/CV/blob/main/cv.pdf">my personal Github repository</a> for an older version of my CV.</p>
+      </section>
+      <section id="service" class="collapsible">
+        <h2 class="title">Service</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Experience</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Website under construction! Please see <a href="https://github.com/kmsherbert/CV/blob/main/cv.pdf">my personal Github repository</a> for an older version of my CV.</p>
+      </section>
+      <section id="awards" class="collapsible expanded">
+        <h2 class="summary">Awards</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Award</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>O'Connor Fellow (HCC)</td>
+              <td>2026</td>
+            </tr>
+            <tr>
+              <td>QCE24 Quantum Machine Learning Track, Best Paper</td>
+              <td>2024</td>
+            </tr>
+            <tr>
+              <td>College of Science Travel Award (UNT)</td>
+              <td>2020</td>
+            </tr>
+            <tr>
+              <td>Maryland Space Grant Consortium Scholar</td>
+              <td>2014-2015</td>
+            </tr>
+            <tr>
+              <td>Edward L. Rubendall Outstanding Physics Student (TU)</td>
+              <td>2012-14</td>
+            </tr>
+            <tr>
+              <td>Jess Fisher FCSM Scholar (TU, Full Tuition Scholarship)</td>
+              <td>2011-15</td>
+            </tr>
+            <tr>
+              <td>Maryland Distinguished Scholar</td>
+              <td>2011-15</td>
+            </tr>
+            <tr>
+              <td>Towson University Honors Scholar</td>
+              <td>2011-15</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="resume" class="collapsible expanded">
+        <h2 class="title">Other Experience</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Experience</th>
+              <th>Affiliation</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Website under construction! Please see <a href="https://github.com/kmsherbert/CV/blob/main/cv.pdf">my personal Github repository</a> for an older version of my CV.</p>
+      </section>
+      <section id="skills" class="collapsible expanded">
+        <h2 class="title">Skills</h2>
+        <ul>
+          <li><strong>Programming Languages:</strong> Python, Julia, Java, JavaScript</li>
+          <li><strong>MS Office:</strong> PowerPoint, Word, Excel</li>
+        </ul>
+        <p>It would be better to signal proficiency level somehow.</p>
+        <p>Website under construction! Please see <a href="https://github.com/kmsherbert/CV/blob/main/cv.pdf">my personal Github repository</a> for an older version of my CV.</p>
+      </section>
+    </div>
   </body>
 </html>

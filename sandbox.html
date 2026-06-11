@@ -1,18 +1,25 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Knowing Starlight</title>
     <link rel="icon" href="media/polaris.png">
     <link rel="stylesheet" href="style.css">
-    <script src="hello.js"></script>
+    <script src="script/hello.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html">Blog</a>
-      <a href="resume.html">Resume</a>
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Musings</a>
+      <a href="resume.html">CV</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact Me</a>
-      <a href="sandbox.html">Sandbox</a>
+      <a href="sandbox.html" class="active-nav">Sandbox</a>
       <a href="api.html">API</a>
     </nav>
+    <div class="sandbox pane">
+      <h2>Console Sandbox</h2>
+      <p><strong>Open up your console <em>before</em> clicking this button.</strong> Windows users running Chrome or Edge can use the hotkey Ctrl+Shift+I.</p>
+      <button onclick="main()">Click To Start Game</button>
+    </div>
   </body>
 </html>

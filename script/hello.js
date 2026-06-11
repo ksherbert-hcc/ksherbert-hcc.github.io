@@ -24,6 +24,7 @@ function startgame(user) {
             return;
         default:
             console.log(choice+" is not valid. Please enter a number corresponding to your choice.");
+            console.log("");
             startgame(user);                                    // Try the same scene again.
     }
 }
@@ -78,6 +79,7 @@ function woodedPath(user, hasSword, killedOgre, hasPrincess) {
             return;
         default:
             console.log(choice+" is not valid. Please enter a number corresponding to your choice.");
+            console.log("");
             woodedPath(user, true, killedOgre, hasPrincess);            // Try the same scene again.
     }
 }
@@ -132,6 +134,7 @@ function castleGate(user, hasSword, killedOgre, hasPrincess) {
             return;
         default:
             console.log(choice+" is not valid. Please enter a number corresponding to your choice.");
+            console.log("");
             castleGate(user, true, killedOgre, hasPrincess);            // Try the same scene again.
     }
 }
@@ -161,14 +164,15 @@ function throneRoom(user, hasSword, killedOgre, hasPrincess) {
             return;
         default:
             console.log(choice+" is not valid. Please enter a number corresponding to your choice.");
+            console.log("");
             throneRoom(user, hasSword, killedOgre, hasPrincess);    // Try the same scene again.
     }
 }
 
+function main() {
+    let user = prompt("What is your name?");
+    startgame(user);
+}
 
 
 
-
-
-let user = prompt("What is your name?");
-startgame(user);

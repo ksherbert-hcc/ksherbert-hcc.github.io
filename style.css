@@ -4,34 +4,156 @@
 }
 
 body {
-    background-color: var(--hcc-gray);
+    overflow-y: scroll;
+    background-color: silver;
+    font-size: large;
+    margin: 0;
 }
 
 em {
     color: var(--hcc-maroon);
-    font-style: normal;
+    /* font-style: normal; */
 }
 
-.pdf {
-    width: 80em;
-    height: 40em;
+.pane {
+    margin: 2em;
+    border: 2px solid black;
+    padding: 2em;
+    background-color: white;
 }
+
+/* COLLAPSIBLE BOXES */
 
 .collapsible {
     margin: 2em;
+    border: 2px solid black;
+    padding: 0 2em 0 0;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 4em 1fr;
+}
+
+.collapsible > :first-child {
+    margin-right: 2em;
+    grid-column: 1;
+    grid-row: 1 / 9999; /* The 9999 is a number presumably larger than the number of children in the section. I think that a fully robust solution requires more javascript? */
+    background-color: var(--hcc-maroon);
+    font-size: large;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.collapsible > :first-child:hover {
+    filter: opacity(80%);
+}
+
+.collapsible > :first-child:active {
+    filter: opacity(20%);
+}
+
+.collapsible > .summary {
+    font-style: italic;
+}
+
+/* NAVIGATION BAR */
+
+.top-nav {
+    display: flex;
+}
+
+.top-nav > a {
+    flex-grow: 1;
+    border: 2px solid black;
+    border-width: 2px 1px;
     padding: 2em;
-    background-color: skyblue;
+    background-color: var(--hcc-maroon);
+    font-size: large;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
 }
 
-.collapsible > button {
-    float: left;
+.top-nav > a:hover {
+    filter: opacity(80%);
 }
 
-.footnote-ref {
+.top-nav > a:active {
+    filter: opacity(20%);
+}
+
+.top-nav > .active-nav {
+    background-color: var(--hcc-gray);
+}
+
+/* BLOG */
+
+.blog h2 {
+    text-align: center;
+}
+
+.blog p {
+    text-align: justify;
+}
+
+.blog .date {
+    text-align: right;
+    font-style: italic;
+}
+
+.blog .footnote-ref {
     vertical-align: super;
     font-size: small;
 }
 
-.footnote {
+.blog .footnote {
     font-size: smaller;
+}
+
+/* RESUME */
+
+.resume table {
+    margin: 1em 0em;
+}
+
+.resume th, .resume td {
+    text-align: left;
+    padding-right: 1em;
+}
+
+.resume th {
+    font-size: x-large;
+}
+
+.resume table .separator th {
+    font-size: large;
+    text-align: center;
+    padding: 1em;
+}
+
+/* GALLERY */
+
+.gallery img {
+    width: 100%
+}
+
+.gallery .pdf {
+    width: 100%;
+    height: 40em;
+}
+
+/* CONTACT */
+
+.contact form {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form textarea {
+    width: 40em;
+    height: 20em;
 }

@@ -6,26 +6,45 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav>
-      <a href="index.html">Blog</a>
-      <a href="resume.html">Resume</a>
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Musings</a>
+      <a href="resume.html">CV</a>
       <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact Me</a>
+      <a href="contact.html" class="active-nav">Contact Me</a>
       <a href="sandbox.html">Sandbox</a>
       <a href="api.html">API</a>
     </nav>
-    <form action="https://formsubmit.co/25c8510612517b90b648b3ac5492b799" method="POST">
-      <table>
-        <tr><td><label for="name">Name:</label></td><td><input type="text" name="name" id="name" required></td></tr>
-        <tr><td><label for="email">Email:</label></td><td><input type="email" name="email" id="email" required></td></tr>
-        <tr><td><label for="subject">Subject: </label></td><td><input type="text" name="_subject" id="subject" required></td></tr>
-        <tr><td colspan="2"><textarea name="content" placeholder="Type your message here..."></textarea></td></tr>
-      </table>
-      <p>Choose a style:</p>
-      <p><input type="radio" name="_template" value="basic" id="basic" checked><label for="basic">Basic</label></p>
-      <p><input type="radio" name="_template" value="table" id="table"><label for="table">Table</label></p>
-      <p><input type="radio" name="_template" value="box" id="box"><label for="box">Box</label></p>
-      <p><button type="submit">Send</button></p>
-    </form>
+    <div class="contact pane">
+      <h2>Contact Form</h2>
+      <p>Bots and spam have long plagued the Internet. Web scrapers are easily able to automatically extract hapless professors' email addresses from their personal websites and use them for nefarious purposes. A brief glance at my CV will reveal that I choose not to be intimidated, but many of my profession choose to share their email in a somewhat obfuscated form, easily understood by any human but less obvious to a computer. For example, you are welcome to email me directly by contacting ksherbert at hcc dash nd dot edu.</p>
+      <p>But this strategy does still publish your email address, so it can still be abused by bad actors. An alternate solution is to provide a <em>web form</em> for parties who want to get in touch. One might use a 3rd-party service such as <a href="https://formsubmit.co">FormSubmit</a> to act as an email broker, ensuring one is perfectly accessible while simultaneously ensuring one's email address does not wind up getting passed around on the dark web. You are welcome to contact me using this method, also.</p>
+      <form action="https://formsubmit.co/25c8510612517b90b648b3ac5492b799" method="POST">
+        <table>
+          <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" name="name" id="name" required></td>
+            <td rowspan="3"><button type="submit">Send</button></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" name="email" id="email" required></td>
+          </tr>
+          <tr>
+            <td><label for="subject">Subject:</label></td>
+            <td><input type="text" name="_subject" id="subject" required></td>
+          </tr>
+          <tr>
+            <td colspan="3"><textarea name="content" placeholder="Type your message here..."></textarea></td>
+          </tr>
+        </table>
+        <!-- TOOD: I need to incorporate another advanced feature somewhow... -->
+        <!-- <p>Choose a style:</p>
+        <p><input type="radio" name="_template" value="basic" id="basic" checked><label for="basic">Basic</label></p>
+        <p><input type="radio" name="_template" value="table" id="table"><label for="table">Table</label></p>
+        <p><input type="radio" name="_template" value="box" id="box"><label for="box">Box</label></p> -->
+        <!-- <p><button type="submit">Send</button></p> -->
+      </form>
+    </div>
   </body>
 </html>

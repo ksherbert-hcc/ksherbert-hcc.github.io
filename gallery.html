@@ -4,33 +4,35 @@
     <title>Knowing Starlight</title>
     <link rel="icon" href="media/polaris.png">
     <link rel="stylesheet" href="style.css">
-    <script src="collapsiblesections.js" defer></script>
+    <script src="script/collapsiblesections.js" defer></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html">Blog</a>
-      <a href="resume.html">Resume</a>
-      <a href="gallery.html">Gallery</a>
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Musings</a>
+      <a href="resume.html">CV</a>
+      <a href="gallery.html" class="active-nav">Gallery</a>
       <a href="contact.html">Contact Me</a>
       <a href="sandbox.html">Sandbox</a>
       <a href="api.html">API</a>
     </nav>
-    <h1>Gallery</h1>
-    <section class="collapsible">
-      <h2>Exhibit A</h2>
-      <p>This photo was taken by yours truly when touring Ireland the week before the Scottish referendum of 2014.</p>
-      <img src="media/Belfast's big YES.jpg" alt="Belfast want to give a big yes.">
-    </section>
-    <section class="collapsible">
-      <h2>Exhibit B</h2>
-      <p>This audio was recorded by yours truly in front of Scottish parliament on the evening of the great referendum.</p>
-      <audio><!-- TODO: audio: Scottish independence. --></audio>
-      <p>...but I've forgotten which computer I have those files on, so you're just going to have to believe me..!</p>
-    </section>
-    <section class="collapsible">
-      <h2>Exhibit C</h2>
-      <p>This story was written by yours truly during one of my sojourns to the Scottish borough of Paisley.</p>
-      <iframe class="pdf" src="media/Scarlet's Letters.pdf"></iframe>
-    </section>
+    <div class="gallery">
+      <section class="collapsible">
+        <h2 class="title">Exhibit A</h2>
+        <p class="summary">This photo was taken by yours truly when touring Ireland the week before the Scottish referendum of 2014.</p>
+        <p><img src="media/Belfast's big YES.jpg" alt="Belfast want to give a big yes."></p>
+      </section>
+      <section class="collapsible">
+        <h2 class="title">Exhibit B</h2>
+        <p class="summary">This audio was recorded by yours truly in front of Scottish parliament on the evening of the great referendum.</p>
+        <audio><!-- TODO: audio: Scottish independence. --></audio>
+        <p>...but I've forgotten which computer I have those files on, so you're just going to have to believe me..!</p>
+      </section>
+      <section class="collapsible">
+        <h2 class="title">Exhibit C</h2>
+        <p class="summary">This story was written by yours truly during one of my sojourns to the Scottish borough of Paisley.</p>
+        <p><iframe class="pdf" src="media/Scarlet's Letters.pdf"></iframe></p>
+      </section>
+    </div>
   </body>
 </html>
